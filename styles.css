@@ -14,3 +14,11 @@ img{
     max-width: 500px;
 
 }
+@media(max-width: 769px){
+    .small-screen{
+        display:none;
+    }
+}
+#test{
+    width:20%;
+}
