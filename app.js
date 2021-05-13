@@ -16,6 +16,7 @@ axios
   .then((res) => {
     let allCurrencies = res.data;
     let cryptoCoin = "";
+    // console.log(allCurrencies);
     // Loop over each coin object
     allCurrencies.forEach((coin) => {
       cryptoCoin += `<tr class="coin-row"> `;
@@ -25,14 +26,10 @@ axios
       cryptoCoin += `<td class="text-start"> £${coin.current_price
         .toFixed(2)
         .toLocaleString()}</td>`;
-      if (coin.price_change_percentage_24h < 0) {
-        cryptoCoin += `<td class="text-danger small-screen"> ${coin.price_change_percentage_24h.toFixed(
-          2
-        )}%</td>`;
+      if (coin.price_change_percentage_24h_in_currency < 0) {
+        cryptoCoin += `<td class="text-danger small-screen"> ${coin.price_change_percentage_24h_in_currency}%</td>`;
       } else {
-        cryptoCoin += `<td class="text-success small-screen"> ${coin.price_change_percentage_24h.toFixed(
-          2
-        )}%</td>`;
+        cryptoCoin += `<td class="text-success small-screen"> ${coin.price_change_percentage_24h_in_currency}%</td>`;
       }
       if (coin.price_change_percentage_7d_in_currency < 0) {
         cryptoCoin += `<td class="text-danger small-screen"> ${coin.price_change_percentage_7d_in_currency.toFixed(
