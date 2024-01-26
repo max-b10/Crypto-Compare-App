@@ -6,7 +6,7 @@ const searchTextInput = document.querySelector("#search-text");
 // let deviceWidth = document.documentElement.clientWidth || window.innerWidth;
 
 portfolioButton.addEventListener("click", () => {
-  window.location.replace("https://portfoliomax.netlify.app");
+  window.location.replace("https://maxbungay.com");
 });
 
 axios
